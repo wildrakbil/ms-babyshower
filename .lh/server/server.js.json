@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1720103720980,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720129314212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,17 @@\n const app = express();\n const PORT = process.env.PORT || 8088;\n const DATA_FILE = './gifts.json';\n \n+const cors = require('cors');\n+\n+const corsOptions = {\n+  origin: 'https://babyshower.z13.web.core.windows.net',\n+  optionsSuccessStatus: 200\n+};\n+\n+app.use(cors(corsOptions));\n+\n // Middleware para analizar cuerpos de solicitud JSON\n app.use(bodyParser.json());\n \n // Middleware para permitir CORS (solo para desarrollo, en producción configurar correctamente)\n"
+                },
+                {
+                    "date": 1720130069411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,17 +5,8 @@\n const app = express();\n const PORT = process.env.PORT || 8088;\n const DATA_FILE = './gifts.json';\n \n-const cors = require('cors');\n-\n-const corsOptions = {\n-  origin: 'https://babyshower.z13.web.core.windows.net',\n-  optionsSuccessStatus: 200\n-};\n-\n-app.use(cors(corsOptions));\n-\n // Middleware para analizar cuerpos de solicitud JSON\n app.use(bodyParser.json());\n \n // Middleware para permitir CORS (solo para desarrollo, en producción configurar correctamente)\n"
+                },
+                {
+                    "date": 1720130180985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n const express = require('express');\n const bodyParser = require('body-parser');\n const fs = require('fs');\n+const cors = require('cors');\n \n const app = express();\n const PORT = process.env.PORT || 8088;\n const DATA_FILE = './gifts.json';\n \n // Middleware para analizar cuerpos de solicitud JSON\n app.use(bodyParser.json());\n \n-// Middleware para permitir CORS (solo para desarrollo, en producción configurar correctamente)\n-app.use((req, res, next) => {\n-  res.setHeader('Access-Control-Allow-Origin', '*');\n-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');\n-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');\n-  next();\n-});\n+// Middleware para permitir CORS\n+app.use(cors({\n+  origin: 'https://babyshower.z13.web.core.windows.net', // Tu dominio de front-end\n+  methods: 'GET, POST, PUT, DELETE',\n+  allowedHeaders: 'Content-Type'\n+}));\n \n // Ruta GET para obtener todos los regalos\n app.get('/ms-event-producer/gift', (req, res) => {\n   fs.readFile(DATA_FILE, 'utf8', (err, data) => {\n"
                 }
             ],
             "date": 1720103720980,
