@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const app = express();
-const PORT = 8088;
+const PORT = process.env.PORT || 8088;
 const DATA_FILE = './gifts.json';
 
 // Middleware para analizar cuerpos de solicitud JSON
