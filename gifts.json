@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "gift": "Bodies 3-6",
+    "name": "WIlliam Andre",
+    "isEdit": false
+  },
+  {
+    "id": 2,
+    "gift": "Bodies 6-9",
+    "name": "JUan",
+    "isEdit": false
+  },
+  {
+    "id": 3,
+    "gift": "Pijamas 3-6",
+    "name": "Pedro",
+    "isEdit": false
+  },
+  {
+    "id": 4,
+    "gift": "Pijamas 6-9",
+    "name": "asd",
+    "isEdit": false
+  },
+  {
+    "id": 5,
+    "gift": "Conjunto de ropa 3-6",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 6,
+    "gift": "Conjunto de ropa 9-12",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 7,
+    "gift": "Calcetines y Zapatos",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 8,
+    "gift": "Gorros y Guantes",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 9,
+    "gift": "Chaquetas o Abrigos",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 10,
+    "gift": "Semanario esqueletos 3-6",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 11,
+    "gift": "Semanario esqueletos 6-9",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 12,
+    "gift": "Cogin de lactancia",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 13,
+    "gift": "Zapato burbuja",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 14,
+    "gift": "Cobertor Victoria",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 15,
+    "gift": "Alimentación",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 16,
+    "gift": "Kit de Biberones",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 17,
+    "gift": "Esterilizador de biberones",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 18,
+    "gift": "Juego de Baberos Carters",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 19,
+    "gift": "Mobiliario y Accesorios",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 20,
+    "gift": "Cobija termica",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 21,
+    "gift": "Tina de baño",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 22,
+    "gift": "Toallas con capucha",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 23,
+    "gift": "Pañalera",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 24,
+    "gift": "Portabebés o mochila ergonómica",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 25,
+    "gift": "Kit de uñas (corta uñas, aspirador nasal, termometro, cepillo de peinar)",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 26,
+    "gift": "Kit de aseo",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 27,
+    "gift": "Silla mecedora",
+    "name": "",
+    "isEdit": true
+  },
+  {
+    "id": 28,
+    "gift": "Cambiador",
+    "name": "",
+    "isEdit": true
+  }
+]
