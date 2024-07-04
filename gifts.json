@@ -62,8 +62,8 @@
   {
     "id": 10,
     "gift": "Calcetines y Zapatos",
-    "name": "",
-    "isEdit": true
+    "name": "Wilson abella",
+    "isEdit": false
   },
   {
     "id": 11,
@@ -74,8 +74,8 @@
   {
     "id": 12,
     "gift": "Chaquetas o Abrigos",
-    "name": "",
-    "isEdit": true
+    "name": "Lilia Sánchez",
+    "isEdit": false
   },
   {
     "id": 13,
@@ -176,8 +176,8 @@
   {
     "id": 27,
     "gift": "Toallas con capucha",
-    "name": "",
-    "isEdit": true
+    "name": "Ana Sánchez",
+    "isEdit": false
   },
   {
     "id": 28,
@@ -194,8 +194,8 @@
   {
     "id": 30,
     "gift": "Kit de uñas (corta uñas, aspirador nasal, termometro, cepillo de peinar)",
-    "name": "",
-    "isEdit": true
+    "name": "Luisa Abella y famila",
+    "isEdit": false
   },
   {
     "id": 31,
@@ -206,8 +206,8 @@
   {
     "id": 32,
     "gift": "Silla mecedora",
-    "name": "",
-    "isEdit": true
+    "name": "Abuelo P",
+    "isEdit": false
   },
   {
     "id": 33,
