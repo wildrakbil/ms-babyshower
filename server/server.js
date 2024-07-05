@@ -52,7 +52,18 @@ app.put('/ms-event-producer/gift/:id', (req, res) => {
         return;
       }
 
-      let gifts = JSON.parse(data);
+      let gifts;
+      try {
+        gifts = JSON.parse(data);
+      } catch (parseError) {
+        console.error('Error parsing JSON:', parseError);
+        lockfile.unlock(DATA_FILE, err => {
+          if (err) console.error('Error unlocking file:', err);
+        });
+        res.status(500).json({ error: 'Internal server error' });
+        return;
+      }
+
       const index = gifts.findIndex(gift => gift.id === parseInt(id));
       if (index === -1) {
         lockfile.unlock(DATA_FILE, err => {

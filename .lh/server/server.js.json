@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1720103720980,
@@ -28,6 +28,10 @@
                 {
                     "date": 1720140048226,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,44 +31,64 @@\n });\n \n // Ruta PUT para actualizar un regalo por su ID\n app.put('/ms-event-producer/gift/:id', (req, res) => {\n-    const { id } = req.params;\n-    const { name, isEdit } = req.body;\n-  \n+  const { id } = req.params;\n+  const { name, isEdit } = req.body;\n+\n+  lockfile.lock(DATA_FILE, { retries: 10 }, (err) => {\n+    if (err) {\n+      console.error('Error locking file:', err);\n+      res.status(500).json({ error: 'Internal server error' });\n+      return;\n+    }\n+\n     fs.readFile(DATA_FILE, 'utf8', (err, data) => {\n       if (err) {\n         console.error('Error reading file:', err);\n+        lockfile.unlock(DATA_FILE, err => {\n+          if (err) console.error('Error unlocking file:', err);\n+        });\n         res.status(500).json({ error: 'Internal server error' });\n         return;\n       }\n-  \n+\n       let gifts = JSON.parse(data);\n       const index = gifts.findIndex(gift => gift.id === parseInt(id));\n       if (index === -1) {\n+        lockfile.unlock(DATA_FILE, err => {\n+          if (err) console.error('Error unlocking file:', err);\n+        });\n         res.status(404).json({ error: 'Gift not found' });\n         return;\n       }\n-  \n+\n       // Actualiza el nombre y el estado de edición del regalo\n       gifts[index].name = name;\n       gifts[index].isEdit = isEdit;\n-  \n+\n       // Escribe los cambios en el archivo JSON\n       fs.writeFile(DATA_FILE, JSON.stringify(gifts, null, 2), 'utf8', err => {\n         if (err) {\n           console.error('Error writing file:', err);\n+          lockfile.unlock(DATA_FILE, err => {\n+            if (err) console.error('Error unlocking file:', err);\n+          });\n           res.status(500).json({ error: 'Internal server error' });\n           return;\n         }\n-  \n+\n+        lockfile.unlock(DATA_FILE, err => {\n+          if (err) console.error('Error unlocking file:', err);\n+        });\n+\n         // Retorna el regalo actualizado como respuesta\n         res.json(gifts[index]);\n       });\n     });\n   });\n-  \n+});\n \n // Configuración para escuchar el puerto\n app.listen(PORT, () => {\n   console.log(`Server is running on http://localhost:${PORT}`);\n-});\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720140765072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,20 @@\n         res.status(500).json({ error: 'Internal server error' });\n         return;\n       }\n \n-      let gifts = JSON.parse(data);\n+      let gifts;\n+      try {\n+        gifts = JSON.parse(data);\n+      } catch (parseError) {\n+        console.error('Error parsing JSON:', parseError);\n+        lockfile.unlock(DATA_FILE, err => {\n+          if (err) console.error('Error unlocking file:', err);\n+        });\n+        res.status(500).json({ error: 'Internal server error' });\n+        return;\n+      }\n+\n       const index = gifts.findIndex(gift => gift.id === parseInt(id));\n       if (index === -1) {\n         lockfile.unlock(DATA_FILE, err => {\n           if (err) console.error('Error unlocking file:', err);\n@@ -90,5 +101,5 @@\n \n // Configuración para escuchar el puerto\n app.listen(PORT, () => {\n   console.log(`Server is running on http://localhost:${PORT}`);\n-});\n\\ No newline at end of file\n+});\n"
                 }
             ],
             "date": 1720103720980,

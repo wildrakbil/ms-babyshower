@@ -2,8 +2,8 @@
   {
     "id": 1,
     "gift": "Bodies 3-6",
-    "name": "",
-    "isEdit": true
+    "name": "Carolina",
+    "isEdit": false
   },
   {
     "id": 2,
@@ -147,7 +147,7 @@
     "id": 22,
     "gift": "Kit de Biberones AVENT",
     "name": "Ronald",
-    "isEdit": true
+    "isEdit": false
   },
   {
     "id": 23,
