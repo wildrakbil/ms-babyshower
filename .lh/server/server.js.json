@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1720103720980,
@@ -44,6 +44,10 @@
                 {
                     "date": 1720143148636,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,14 @@\n     allowedHeaders: \"Content-Type\",\n   })\n );\n \n+// Función para obtener el nombre del archivo de respaldo con marca de tiempo\n+function getBackupFileName() {\n+  const timestamp = new Date().toISOString().replace(/[-T:.Z]/g, \"\");\n+  return `./gifts_backup_${timestamp}.json`;\n+}\n+\n // Ruta GET para obtener todos los regalos\n app.get(\"/ms-event-producer/gift\", (req, res) => {\n   fs.readFile(DATA_FILE, \"utf8\", (err, data) => {\n     if (err) {\n@@ -69,8 +75,18 @@\n         res.status(500).json({ error: \"Internal server error\" });\n         return;\n       }\n \n+        // Generar el nombre del archivo de respaldo con marca de tiempo\n+        const BACKUP_FILE = getBackupFileName();\n+\n+        // Crear una copia del archivo actualizado\n+        fs.copyFile(DATA_FILE, BACKUP_FILE, (err) => {\n+          if (err) {\n+            console.error(\"Error creating backup file:\", err);\n+            // No detenemos la respuesta si falla la copia de seguridad\n+          }\n+\n       // Retorna el regalo actualizado como respuesta\n       res.json(gifts[index]);\n     });\n   });\n"
+                },
+                {
+                    "date": 1720143747094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,20 +75,21 @@\n         res.status(500).json({ error: \"Internal server error\" });\n         return;\n       }\n \n-        // Generar el nombre del archivo de respaldo con marca de tiempo\n-        const BACKUP_FILE = getBackupFileName();\n+      // Generar el nombre del archivo de respaldo con marca de tiempo\n+      const BACKUP_FILE = getBackupFileName();\n \n-        // Crear una copia del archivo actualizado\n-        fs.copyFile(DATA_FILE, BACKUP_FILE, (err) => {\n-          if (err) {\n-            console.error(\"Error creating backup file:\", err);\n-            // No detenemos la respuesta si falla la copia de seguridad\n-          }\n+      // Crear una copia del archivo actualizado\n+      fs.copyFile(DATA_FILE, BACKUP_FILE, (err) => {\n+        if (err) {\n+          console.error(\"Error creating backup file:\", err);\n+          // No detenemos la respuesta si falla la copia de seguridad\n+        }\n \n-      // Retorna el regalo actualizado como respuesta\n-      res.json(gifts[index]);\n+        // Retorna el regalo actualizado como respuesta\n+        res.json(gifts[index]);\n+      });\n     });\n   });\n });\n \n"
                 }
             ],
             "date": 1720103720980,
