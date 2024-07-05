@@ -19,6 +19,12 @@ app.use(
   })
 );
 
+// Función para obtener el nombre del archivo de respaldo con marca de tiempo
+function getBackupFileName() {
+  const timestamp = new Date().toISOString().replace(/[-T:.Z]/g, "");
+  return `./gifts_backup_${timestamp}.json`;
+}
+
 // Ruta GET para obtener todos los regalos
 app.get("/ms-event-producer/gift", (req, res) => {
   fs.readFile(DATA_FILE, "utf8", (err, data) => {
@@ -69,6 +75,16 @@ app.put("/ms-event-producer/gift/:id", (req, res) => {
         res.status(500).json({ error: "Internal server error" });
         return;
       }
+
+        // Generar el nombre del archivo de respaldo con marca de tiempo
+        const BACKUP_FILE = getBackupFileName();
+
+        // Crear una copia del archivo actualizado
+        fs.copyFile(DATA_FILE, BACKUP_FILE, (err) => {
+          if (err) {
+            console.error("Error creating backup file:", err);
+            // No detenemos la respuesta si falla la copia de seguridad
+          }
 
       // Retorna el regalo actualizado como respuesta
       res.json(gifts[index]);
