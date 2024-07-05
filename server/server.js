@@ -37,7 +37,7 @@ app.put('/ms-event-producer/gift/:id', (req, res) => {
 
   lockfile.lock(DATA_FILE, { retries: 10 }, (err) => {
     if (err) {
-      console.error('Error locking file:', err);
+      console.error('Error locking file to lock:', err);
       res.status(500).json({ error: 'Internal server error' });
       return;
     }
@@ -46,7 +46,7 @@ app.put('/ms-event-producer/gift/:id', (req, res) => {
       if (err) {
         console.error('Error reading file:', err);
         lockfile.unlock(DATA_FILE, err => {
-          if (err) console.error('Error unlocking file:', err);
+          if (err) console.error('Error unlocking file to readFile:', err);
         });
         res.status(500).json({ error: 'Internal server error' });
         return;
@@ -58,7 +58,7 @@ app.put('/ms-event-producer/gift/:id', (req, res) => {
       } catch (parseError) {
         console.error('Error parsing JSON:', parseError);
         lockfile.unlock(DATA_FILE, err => {
-          if (err) console.error('Error unlocking file:', err);
+          if (err) console.error('Error unlocking file to JSON.parse:', err);
         });
         res.status(500).json({ error: 'Internal server error' });
         return;
@@ -67,7 +67,7 @@ app.put('/ms-event-producer/gift/:id', (req, res) => {
       const index = gifts.findIndex(gift => gift.id === parseInt(id));
       if (index === -1) {
         lockfile.unlock(DATA_FILE, err => {
-          if (err) console.error('Error unlocking file:', err);
+          if (err) console.error('Error unlocking file to findIndex:', err);
         });
         res.status(404).json({ error: 'Gift not found' });
         return;
@@ -82,14 +82,14 @@ app.put('/ms-event-producer/gift/:id', (req, res) => {
         if (err) {
           console.error('Error writing file:', err);
           lockfile.unlock(DATA_FILE, err => {
-            if (err) console.error('Error unlocking file:', err);
+            if (err) console.error('Error unlocking file to writeFile:', err);
           });
           res.status(500).json({ error: 'Internal server error' });
           return;
         }
 
         lockfile.unlock(DATA_FILE, err => {
-          if (err) console.error('Error unlocking file:', err);
+          if (err) console.error('Error unlocking file: to final unlock', err);
         });
 
         // Retorna el regalo actualizado como respuesta
