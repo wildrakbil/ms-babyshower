@@ -8,32 +8,32 @@
   {
     "id": 2,
     "gift": "Bodies 6-9",
-    "name": "",
-    "isEdit": true
+    "name": "Mayra",
+    "isEdit": false
   },
   {
     "id": 3,
     "gift": "Bodies 9-12",
-    "name": "",
-    "isEdit": true
+    "name": "Cecilia Castro ",
+    "isEdit": false
   },
   {
     "id": 4,
     "gift": "Pijamas 3-6",
-    "name": "",
-    "isEdit": true
+    "name": "Marcos y elena",
+    "isEdit": false
   },
   {
     "id": 5,
     "gift": "Pijamas 6-9",
-    "name": "",
-    "isEdit": true
+    "name": "Paola Vela",
+    "isEdit": false
   },
   {
     "id": 6,
     "gift": "Pijamas 9-12",
-    "name": "",
-    "isEdit": true
+    "name": "Lucila Castro ",
+    "isEdit": false
   },
   {
     "id": 5,
@@ -68,8 +68,8 @@
   {
     "id": 11,
     "gift": "Gorros y Guantes",
-    "name": "",
-    "isEdit": true
+    "name": "Oneida",
+    "isEdit": false
   },
   {
     "id": 12,
@@ -79,9 +79,9 @@
   },
   {
     "id": 13,
-    "gift": "Chaquetas o Abrigos",
-    "name": "",
-    "isEdit": true
+    "gift": "Silla comedor bebé",
+    "name": "Familia Castellanos",
+    "isEdit": false
   },
   {
     "id": 10,
@@ -152,8 +152,8 @@
   {
     "id": 23,
     "gift": "Esterilizador de biberones",
-    "name": "",
-    "isEdit": true
+    "name": "Lady Marcela castro ",
+    "isEdit": false
   },
   {
     "id": 24,
@@ -164,8 +164,8 @@
   {
     "id": 25,
     "gift": "Cobija termica",
-    "name": "",
-    "isEdit": true
+    "name": "Juliana pinzon",
+    "isEdit": false
   },
   {
     "id": 26,
@@ -182,8 +182,8 @@
   {
     "id": 28,
     "gift": "Pañalera",
-    "name": "",
-    "isEdit": true
+    "name": "Edmison y Marcela ",
+    "isEdit": false
   },
   {
     "id": 29,
@@ -200,8 +200,8 @@
   {
     "id": 31,
     "gift": "Kit de aseo",
-    "name": "",
-    "isEdit": true
+    "name": "Kenjhy, Lizeth y Daniel",
+    "isEdit": false
   },
   {
     "id": 32,
@@ -224,7 +224,7 @@
   {
     "id": 35,
     "gift": "Jugetes",
-    "name": "",
-    "isEdit": true
+    "name": "Gabriela",
+    "isEdit": false
   }
 ]

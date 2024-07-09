@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1720110626942,
@@ -28,6 +28,14 @@
                 {
                     "date": 1720140269011,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n [\n   {\n     \"id\": 1,\n     \"gift\": \"Bodies 3-6\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Carolina\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 2,\n     \"gift\": \"Bodies 6-9\",\n@@ -146,9 +146,9 @@\n   {\n     \"id\": 22,\n     \"gift\": \"Kit de Biberones AVENT\",\n     \"name\": \"Ronald\",\n-    \"isEdit\": true\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 23,\n     \"gift\": \"Esterilizador de biberones\",\n"
+                },
+                {
+                    "date": 1720530682371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,34 +7,34 @@\n   },\n   {\n     \"id\": 2,\n     \"gift\": \"Bodies 6-9\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Mayra\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 3,\n     \"gift\": \"Bodies 9-12\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Cecilia Castro \",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 4,\n     \"gift\": \"Pijamas 3-6\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Marcos y elena\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 5,\n     \"gift\": \"Pijamas 6-9\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Paola Vela\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 6,\n     \"gift\": \"Pijamas 9-12\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Lucila Castro \",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 5,\n     \"gift\": \"Conjunto de ropa 3-6\",\n@@ -67,10 +67,10 @@\n   },\n   {\n     \"id\": 11,\n     \"gift\": \"Gorros y Guantes\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Oneida\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 12,\n     \"gift\": \"Chaquetas o Abrigos\",\n@@ -151,10 +151,10 @@\n   },\n   {\n     \"id\": 23,\n     \"gift\": \"Esterilizador de biberones\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Lady Marcela castro \",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 24,\n     \"gift\": \"Juego de Baberos Carters\",\n@@ -163,10 +163,10 @@\n   },\n   {\n     \"id\": 25,\n     \"gift\": \"Cobija termica\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Juliana pinzon\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 26,\n     \"gift\": \"Tina de baño\",\n@@ -181,10 +181,10 @@\n   },\n   {\n     \"id\": 28,\n     \"gift\": \"Pañalera\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Edmison y Marcela \",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 29,\n     \"gift\": \"Portabebés o mochila ergonómica\",\n@@ -199,10 +199,10 @@\n   },\n   {\n     \"id\": 31,\n     \"gift\": \"Kit de aseo\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Kenjhy, Lizeth y Daniel\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 32,\n     \"gift\": \"Silla mecedora\",\n@@ -223,8 +223,8 @@\n   },\n   {\n     \"id\": 35,\n     \"gift\": \"Jugetes\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"name\": \"Gabriela\",\n+    \"isEdit\": false\n   }\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720530725539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,11 +78,11 @@\n     \"isEdit\": false\n   },\n   {\n     \"id\": 13,\n-    \"gift\": \"Chaquetas o Abrigos\",\n-    \"name\": \"\",\n-    \"isEdit\": true\n+    \"gift\": \"Silla comedor bebé\",\n+    \"name\": \"Familia Castellanos\",\n+    \"isEdit\": false\n   },\n   {\n     \"id\": 10,\n     \"gift\": \"Semanario esqueletos 3-6\",\n"
                 }
             ],
             "date": 1720110626941,
