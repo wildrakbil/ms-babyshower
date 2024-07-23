@@ -62,7 +62,7 @@
   {
     "id": 10,
     "gift": "Calcetines y Zapatos",
-    "name": "Wilson abella",
+    "name": "Familia Sanchez Castro",
     "isEdit": false
   },
   {
@@ -104,8 +104,8 @@
   {
     "id": 15,
     "gift": "Cogin de lactancia",
-    "name": "",
-    "isEdit": true
+    "name": "Yudi Abella ",
+    "isEdit": false
   },
   {
     "id": 16,
@@ -122,8 +122,8 @@
   {
     "id": 18,
     "gift": "Sudadera 3-6",
-    "name": "",
-    "isEdit": true
+    "name": "Wilson abella ",
+    "isEdit": false
   },
   {
     "id": 19,
